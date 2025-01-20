@@ -264,7 +264,6 @@ class Parser {
                 this.eat('OR');
             } else if (token.type === "IN") {
                 this.eat("IN")
-                console.log(this.currentToken)
                 const right = this.term();
                 node = new InOperatorNode(node, right);
             }
